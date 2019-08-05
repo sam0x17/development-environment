@@ -45,4 +45,6 @@ USER $SYSTEM_USER_NAME
 RUN /home/$SYSTEM_USER_NAME/.rvm/bin/rvm implode --force
 WORKDIR /home/$SYSTEM_USER_NAME/
 ENV TERM=xterm
+EXPOSE 3000
+EXPOSE 8080
 CMD bash

@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -it --net=host -v ~/workspace:/home/sam/workspace --rm dev-environment
+docker run -it -p 3000:3000 -v ~/workspace:/home/sam/workspace --rm dev-environment
