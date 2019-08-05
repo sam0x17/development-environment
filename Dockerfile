@@ -31,5 +31,5 @@ RUN git config --global user.email "$GIT_USER_EMAIL"
 RUN git config --global core.editor nano
 RUN pip install s3cmd --user
 RUN curl -o- https://raw.githubusercontent.com/sam0x17/conduit/master/install.sh | bash
-RUN source ~/.bashrc && source ~/.bash_profile && conduit
+RUN /home/$SYSTEM_USER_NAME/.conduit/conduit
 CMD source ~/.bashrc && source ~/.bash_profile && bash
