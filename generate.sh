@@ -27,6 +27,7 @@ echo "git user email: $GIT_USER_EMAIL"
 echo "system username: $SYSTEM_USER_NAME"
 cp -r ~/.ssh . || exit 1
 cp ~/.s3cfg . || exit 1
+mkdir -p ~/workspace || exit 1
 docker build -t dev-environment:latest . \
 --build-arg SYSTEM_USER_NAME=$SYSTEM_USER_NAME \
 --build-arg GIT_USER_EMAIL="$GIT_USER_EMAIL" \
