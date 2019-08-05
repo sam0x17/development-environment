@@ -21,7 +21,7 @@ RUN rm /home/$SYSTEM_USER_NAME/.ssh/config
 RUN chown -R $SYSTEM_USER_NAME /home/$SYSTEM_USER_NAME/.ssh
 COPY .s3cfg /home/$SYSTEM_USER_NAME/.s3cfg
 RUN chown $SYSTEM_USER_NAME /home/$SYSTEM_USER_NAME/.s3cfg
-RUN npm install -g pkg
+RUN npm install -g pkg clean-css-cli uglify-js html-minifier
 USER $SYSTEM_USER_NAME
 WORKDIR /home/$SYSTEM_USER_NAME
 RUN echo "export PATH=\$PATH:/home/$SYSTEM_USER_NAME/.local/bin" >> /home/$SYSTEM_USER_NAME/.bashrc
