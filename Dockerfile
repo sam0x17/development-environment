@@ -6,7 +6,7 @@ openssh-client openssh openssh-keygen openssh-keysign py-pip python \
 nano alpine-sdk
 RUN ln -fs /bin/bash /bin/sh
 RUN adduser -h /home/sam -D sam
-RUN echo 'sam ALL=(ALL) ALL' >> /etc/sudoers
+RUN echo 'sam ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 COPY .ssh /home/sam/.ssh
 RUN chown -R sam /home/sam/.ssh
 USER sam
