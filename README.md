@@ -4,8 +4,7 @@ and use as your own.
 
 ## Installation
 1. install docker
-2. set up your `~/.ssh` folder to use no password (optional)
-3. clone the repo
-4. customize the Dockerfile to suit your needs
-5. run `./tag.sh`
-6. make a shortcut to `run.sh` -- you can use this to enter the environment
+2. set up git and your `~/.ssh` folder to use no password
+3. set up s3cmd locally
+4. run `./generate.sh`
+5. make a shortcut to `run.sh` -- you can use this to enter the environment
